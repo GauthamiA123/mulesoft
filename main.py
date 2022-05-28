@@ -14,15 +14,15 @@ c.execute(""" CREATE TABLE Movies (
 
 # insert 1 record to table
 c.execute("""INSERT INTO Movies values(
-            'Spiderman',
-            'Tom',
-            'Zendaya',
-            'Jon',
+            'Dr.Strange',
+            'Benedict',
+            'Elizebeth',
+            'Bruce',
             '2021')
             """)
 
 # insert many records to table
-movie_list = [('Bahubali', 'Prabhas', 'Anushka', 'Rajamouli', '2019'),
+movie_list = [('KGF', 'Yash', 'Srinidhi', 'Sanjay', '2022'),
               ('Spiderman 2', 'Tom', 'Alia', 'Steven', '2019'),
               ('Spiderman 3', 'Tom', 'Natasha', 'Jonny', '2020')]
 
@@ -33,7 +33,7 @@ c.execute("SELECT * FROM Movies")
 print(c.fetchall())
 
 # selecting particular rows from Movies table
-c.execute("SELECT * FROM MOVIES WHERE ACTOR = 'Prabhas'")
+c.execute("SELECT * FROM MOVIES WHERE ACTOR = 'Yash'")
 print(c.fetchall())
 
 # commit a command
